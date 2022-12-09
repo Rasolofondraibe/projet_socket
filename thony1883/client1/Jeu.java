@@ -25,8 +25,7 @@ public class Jeu{
         this.setjoueur1(joueur1);
         this.setjoueur2(joueur2);
         this.socket=socket;
-        //partie affichage//
-                
+        //partie affichage//      
                 table.placerpion(joueur1);
                 table.placerpion(joueur2);
                 Plateau plateau=new Plateau(joueur1,joueur2,table,this.socket);
@@ -37,8 +36,11 @@ public class Jeu{
     }
 
     public void replace(){
-        table.placerpion(joueur1);
-                table.placerpion(joueur2);
+                Plateau plateau=new Plateau(joueur1,joueur2,table,this.socket);
+                Fenetre fenetre=new Fenetre();
+                fenetre.add(plateau);
+                fenetre.setVisible(true);           
+        //partie affichage//
     }
 
     //methode set//

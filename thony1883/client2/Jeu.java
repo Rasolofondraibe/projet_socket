@@ -19,14 +19,13 @@ public class Jeu{
     Socket socket;
     
     int[][] tableau=new int[3][3];
-    Moteur table=new Moteur(tableau);
-    
+                Moteur table=new Moteur(tableau);
     public Jeu(Joueur joueur1,Joueur joueur2,Socket socket){
 
         this.setjoueur1(joueur1);
         this.setjoueur2(joueur2);
         this.socket=socket;
-        //partie affichage//
+        //partie affichage//      
                 table.placerpion(joueur1);
                 table.placerpion(joueur2);
                 Plateau plateau=new Plateau(joueur1,joueur2,table,this.socket);
@@ -37,8 +36,11 @@ public class Jeu{
     }
 
     public void replace(){
-                      table.placerpion(joueur1);
-                table.placerpion(joueur2);
+                Plateau plateau=new Plateau(joueur1,joueur2,table,this.socket);
+                Fenetre fenetre=new Fenetre();
+                fenetre.add(plateau);
+                fenetre.setVisible(true);           
+        //partie affichage//
     }
 
     //methode set//

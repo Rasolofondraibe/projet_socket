@@ -22,13 +22,13 @@ public class Traitment extends Thread{
         Moteur table=new Moteur(tableau);
         Pion[] listepion1=new Pion[3];
         listepion1[0]=new Pion(0,0);
-        listepion1[1]=new Pion(1,0);
-        listepion1[2]=new Pion(2,0);
+        listepion1[1]=new Pion(1,1);
+        listepion1[2]=new Pion(0,2);
 
         Joueur joueur1=new Joueur("thony",1,listepion1);
 
         Pion[] listepion2=new Pion[3];
-        listepion2[0]=new Pion(0,2);
+        listepion2[0]=new Pion(0,1);
         listepion2[1]=new Pion(1,2);
         listepion2[2]=new Pion(2,2);
 
